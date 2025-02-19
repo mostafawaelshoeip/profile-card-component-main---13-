@@ -61,9 +61,9 @@ body {
     }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 350px) {
     .container {
-        max-width: 350px;
+        max-width: 320px;
     }
 }
 
