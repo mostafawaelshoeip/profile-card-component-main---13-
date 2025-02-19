@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+
+    --Dark-cyan: hsl(185, 75%, 39%);
+    --Very-dark-desaturated-blue: hsl(229, 23%, 23%);
+    --Dark-grayish-blue: hsl(227, 10%, 46%);
+
+    --Dark-gray: hsl(0, 0%, 59%);
+}
+
+body {
+    background: url(../images/bg-pattern-bottom.svg);
+    background-size: 400px;
+    background-repeat: no-repeat;
+    background-position: 20px;
+    font-family: "Kumbh Sans", serif;
+    background-color: var(--Dark-cyan);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container {
+    width: 350px;
+    height: 400px;
+    display: grid;
+    grid-template-rows: 38% 38% 24%;
+    text-align: center;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 1px 3px 4px lightgray;
+
+    .image-section {
+        background-image: url(../images/bg-pattern-card.svg);
+        position: relative;
+        width: 100%;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+
+        .image {
+            width: 100%;
+            position: absolute;
+            bottom: -50px;
+            left: 50%;
+            transform: translatex(-50%);
+        }
+
+        img {
+            max-width: 100%;
+            border-radius: 50%;
+            outline: 5px solid white;
+        }
+    }
+}
+
+@media (max-width: 375px) {
+    .container {
+        max-width: 350px;
+        margin: 0 20px;
+    }
+    
+}
+
+.info {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 15px;
+
+    h1 {
+        margin-top: 20px;
+
+        span {
+            color: var(--Dark-gray);
+            font-weight: 500;
+        }
+    }
+
+    p {
+        opacity: 90%;
+    }
+
+}
+
+.statistics {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-content: center;
+    flex-wrap: wrap;
+
+    & div {
+        display: flex;
+        flex-direction: column;
+        row-gap: 5px;
+        margin: 20px auto;
+    }
+
+    & .bold {
+        font-weight: bold;
+    }
+
+    & .normal {
+        font-size: 14px;
+        opacity: 0.8;
+    }
+
+    hr {
+        margin: 10px;
+        height: 3px;
+        width: 100%;
+    }
+}
